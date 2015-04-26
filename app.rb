@@ -1,6 +1,11 @@
-require 'rubygems'
+require 'bundler/setup'
 require 'sinatra'
 
+require 'haml'
+require 'sass'
+require 'coffee-script'
+
 get '/' do
-  'Hello Heroku'
+  @mes = 'Hello Heroku'
+  haml :index
 end
